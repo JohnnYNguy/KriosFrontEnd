@@ -1,0 +1,310 @@
+body, .mapboxgl-popup-content {
+  font-family: 'Arial', sans-serif; 
+  color: #174452; 
+  overflow: hidden;
+}
+
+.mapboxgl-popup-content {
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: #fff;
+}
+.mapboxgl-ctrl-scale{
+ font-size: 20px;
+}
+
+.customPopup {
+  margin-top: 0px;
+  color: #174452; 
+  background-color: #fff;
+  border-radius: 8px; 
+  padding: 15px; 
+  font-family: 'Helvetica Neue', Arial, sans-serif; 
+ 
+}
+
+
+.customPopup button#readMoreBtn {
+  color: #174452;
+  background: none;
+  border: solid 2px #174452;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.customPopup button#readMoreBtn:hover {
+  color: #ffffff;
+  background-color: #174452;
+}
+
+.mapboxgl-popup-close-button {
+  position:absolute;
+  color: #174452; 
+  transform: scale(1.5);
+  background: none;
+}
+.mapboxgl-popup-close-button:hover{
+  position: absolute;
+  transform: scale(1.8);
+  background: none;
+ }
+ .popupCloseTooltip{
+  visibility: hidden;
+}
+.mapboxgl-popup-close-button:hover .popupCloseTooltip {
+visibility: visible;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mapboxgl-popup-tip {
+  display: none;
+}
+
+
+
+.markerClass {
+  width: 30px; 
+  height: 30px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.innerMarker {
+  width: 100%;
+  height: 130%;
+  background-image: url("../assets/icons/userMarker.png");
+  background-size: cover;
+  transition: transform 0.3s ease; 
+  overflow:visible;
+}
+
+.markerClass:hover .innerMarker {
+  cursor: pointer;
+  transform: scale(1.2); /* Scale the inner element on hover */
+  transform-origin: bottom center; /* Adjust the origin of the transformation */
+}
+.legendContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align legends to the right */
+  gap: 10px; /* Spacing between legends */
+  position: absolute;
+  width: auto;
+  top: 10%;
+  right: 10px;
+  z-index: 1000;
+}
+
+.bedrockLegend{
+  position: relative;
+  right: 10px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 450px;        
+  max-height: 400px;   
+  overflow: auto;      
+}
+
+.bedrockImg {
+  margin-left: 23em;
+  margin-top: 310em;
+  display: block;      
+  width: auto;             
+  height: auto;       
+  transform: scale(100); 
+}
+
+.losmasseLegend{ 
+  position: absolute;
+  bottom: 10%;
+  right: 10px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 450px;        
+  max-height: 400px;   
+  overflow: auto;  
+}
+
+.losmasseImg{ 
+  margin-left: 9em;
+  margin-top: 13em;
+  display: block;      
+  width: auto;             
+  height: auto;       
+  transform: scale(5); 
+}
+
+.wmsMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 10em;
+  padding: 5;
+  background: white;
+  border-radius: 5%;
+  right: 90%; 
+  box-Shadow: 0 2px 5px rgba(0,0,0,0.2);
+  padding: 1em;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 34px; /* Reduced width */
+  height: 20px; /* Reduced height */
+  vertical-align: middle; /* Aligns the switch with the text vertically */
+  margin-right: 8px; /* Added right margin to separate text */
+}
+
+.labelText {
+  display: inline-block;
+  margin-left: 3em; /* Spacing between the slider and text */
+  vertical-align: middle; /* Aligns the text vertically center with the toggle */
+  cursor: pointer; /* Makes it clear that the label text is also clickable */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px; /* Adjusted to maintain roundness */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px; /* Reduced size */
+  width: 14px; /* Reduced size */
+  left: 3px; /* Adjusted for smaller slider */
+  bottom: 3px; /* Adjusted for smaller slider */
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px); /* Adjusted to match new width */
+}
+
+/* Optional: adds "roundness" to the slider */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.show-station-marker-btn .show-station-marker-btn-tooltip {
+  visibility: hidden;
+    width: 140px;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: 6;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    scale: 0.7;
+}
+
+.show-station-marker-btn:hover .show-station-marker-btn-tooltip {
+  visibility: visible;
+}
+
+.close-station-marker-btn .close-station-marker-btn-tooltip {
+  visibility: hidden;
+    width: 140px;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: 6;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    scale: 0.7;
+}
+
+.close-station-marker-btn:hover .close-station-marker-btn-tooltip {
+  visibility: visible;
+}
+
+.switch-mapstyle-btn .switch-mapstyle-btn-tooltip {
+  visibility: hidden;
+    width: 100px;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: 6;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    scale: 0.7;
+}
+
+.switch-mapstyle-btn:hover .switch-mapstyle-btn-tooltip {
+  visibility: visible;
+}
+
+.home-btn .home-btn-tooltip {
+  visibility: hidden;
+    width: 80px;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: 6;
+    position: absolute;
+    left: 5px;
+    top: 20px;
+    scale: 0.7;
+}
+
+.home-btn:hover .home-btn-tooltip {
+  visibility: visible;
+}
+

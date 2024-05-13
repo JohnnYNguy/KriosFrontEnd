@@ -1,0 +1,174 @@
+.weather-popup {
+    background-color: #fff;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); */
+    padding: 10px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .weather-detail {
+    display: flex;
+    align-items: start;
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    margin-right: 10px;
+    color: #2a71d0;  /* A soft blue */
+  }
+
+  .temp-icon {
+    margin-left: 5px;
+  }
+  .markerClass{ 
+   z-index: 1;
+  }
+  .temp-detail .temp-tooltip {
+    visibility: hidden;
+    width: 75px;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: 1;
+    position: absolute;
+    left: 40px;
+  }
+
+  .temp-detail:hover .temp-tooltip {
+    visibility: visible;
+  }
+
+  .temp-text {
+    margin-left: 6px;
+  }
+
+  .cloud-detail .cloud-tooltip {
+    visibility: hidden;
+    width: 65px;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: 1;
+    position: absolute;
+    left: 40px;
+  }
+
+  .cloud-detail:hover .cloud-tooltip {
+    visibility: visible;
+  }
+
+  .humidity-icon {
+    margin-left: 4px;
+  }
+
+  .humidity-detail .humidity-tooltip {
+    visibility: hidden;
+    width: 75px;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: 1;
+    position: absolute;
+    left: 40px;
+  }
+
+  .humidity-detail:hover .humidity-tooltip {
+    visibility: visible;
+  }
+
+  .humidity-text {
+    margin-left: 5px;
+  }
+
+  .wind-dir-icon {
+    margin-left: 1px;
+  }
+
+  .wind-dir-detail .wind-dir-tooltip {
+    visibility: hidden;
+    width: 70px;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: 1;
+    position: absolute;
+    left: 40px;
+  }
+
+  .wind-dir-detail:hover .wind-dir-tooltip {
+    visibility: visible;
+  }
+
+  .wind-dir-text {
+    margin-left: 2px;
+  }
+
+  .wind-speed-icon {
+    margin-left: 2px;
+  }
+
+  .wind-speed-detail .wind-speed-tooltip {
+    visibility: hidden;
+    width: 65px;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    background-color: black;
+    border-radius: 6px;
+    z-index: 1;
+    position: absolute;
+    left: 40px;
+  }
+
+  .wind-speed-detail:hover .wind-speed-tooltip {
+    visibility: visible;
+  }
+
+  .wind-speed-text {
+    margin-left: 2px;
+  }
+  
+  .text {
+    font-size: 13px;
+    color: #333;
+  }
+  
+  .read-more-btn {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #45a049; /* Darker green background on hover */
+  }
+  
+  /* Adjustments for the icon size and color */
+  .temp-icon, .cloud-icon, .humidity-icon, .wind-dir-icon, .wind-speed-icon {
+    font-size: 19px;
+  }
+  
+  .address-text {
+    font-size: 12px;
+  }
+
